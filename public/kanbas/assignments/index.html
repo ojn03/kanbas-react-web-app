@@ -20,56 +20,59 @@
 			<ul
 				class="bg-black d-flex flex-column gap-3 list-unstyled text-decoration-none"
 			>
-				<li class="d-flex bg-white flex-column align-items-center">
-					<i class="fa fa-user text-black-50"></i>
-					<a class="text-danger" href="../account.html">Account</a>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-user text-white-50"></i>
+					<a class="text-white" href="../account.html">Account</a>
 				</li>
-				<li class="d-flex flex-column align-items-center">
+				<li class="p-2 d-flex flex-column align-items-center">
 					<i class="fa fa-tachometer-alt text-danger"></i>
 					<a class="text-white text-decoration-none" href="">Dashboard</a>
 				</li>
 
-				<li class="d-flex flex-column align-items-center">
+				<li class="p-2 bg-white d-flex flex-column align-items-center">
 					<i class="fa fa-book text-danger"></i>
-					<a class="text-white" href="../courses.html">Courses</a>
+					<a class="text-danger" href="../courses.html">Courses</a>
 				</li>
-				<li class="d-flex flex-column align-items-center">
+
+				<li class="p-2 d-flex flex-column align-items-center">
 					<i class="fa fa-calendar-alt text-danger"></i>
 					<a class="text-white" href="#">Calendar</a>
 				</li>
-				<li class="d-flex flex-column align-items-center">
+				<li class="p-2 d-flex flex-column align-items-center">
 					<i class="fa fa-inbox text-danger"></i>
 					<a class="text-white" href="#">Inbox</a>
 				</li>
-				<li class="d-flex flex-column align-items-center">
+				<li class="p-2 d-flex flex-column align-items-center">
 					<i class="fa fa-clock text-danger"></i>
 					<a class="text-white" href="#">History</a>
 				</li>
-				<li class="d-flex flex-column align-items-center">
+				<li class="p-2 d-flex flex-column align-items-center">
 					<i class="fa fa-tv text-danger"></i>
 					<a class="text-white" href="#">Studio</a>
 				</li>
-				<li class="d-flex flex-column align-items-center">
+				<li class="p-2 d-flex flex-column align-items-center">
 					<i class="fa fa-power-off fa-rotate-90 text-danger"></i>
 					<a class="text-white" href="#">Commons</a>
 				</li>
-				<li class="d-flex flex-column align-items-center">
+				<li class="p-2 d-flex flex-column align-items-center">
 					<i class="fa fa-question-circle text-danger"></i>
 					<a class="text-white" href="#">Help</a>
 				</li>
 			</ul>
 
-			<div class="d-flex flex-column w-100">
-				<nav class="d-flex gap-2">
-					<i class="fa text-danger fa-2x mx-2 px-3 me-1 fa-bars"></i>
-					<ol class="breadcrumb">
-						<li class="text-danger breadcrumb-item">
-							<a href="#">CS4550.19753.202410</a>
-						</li>
-						<li class="text-black breadcrumb-item active" aria-current="page">
-							Assignments
-						</li>
-					</ol>
+			<div class="d-flex flex-column w-100 p-2 pe-5 ">
+				<nav class="d-flex gap-2 border-bottom">
+					<i class="fa fa-2x text-danger mx-2 px-3 me-1 fa-bars"></i>
+					<h4>
+						<ol class="breadcrumb">
+							<li class="text-danger breadcrumb-item">
+								<a href="#">CS4550.19753.202410</a>
+							</li>
+							<li class="text-black breadcrumb-item active" aria-current="page">
+								Assignments
+							</li>
+						</ol>
+					</h4>
 				</nav>
 
 				<div class="d-flex flex-row w-100">
@@ -95,177 +98,694 @@
 						<li><a href="#">Syllabus</a></li>
 						<li><a href="#">Settings</a></li>
 					</ul>
-					<div class="w-100">
-						<input type="text" placeholder="Search for Assignments" />
+					<div class=" w-100">
+						<div class="border-bottom pb-3 my-4">
+							<input type="text" placeholder="Search for Assignments" />
 
-						<div class="float-end">
-							<button class="btn bg-light border-secondary p-1 rounded-1">
-								<i class="fa fa-plus"></i> Group
-							</button>
-							<button class="btn btn-danger p-1 rounded-1">
-								<i class="fa fa-plus"></i>
-								Assignment
-							</button>
-							<span class="dropdown">
-								<button
-									type="button"
-									class="btn btn-light"
-									data-bs-toggle="dropdown"
-								>
-									<i class="fa fa-ellipsis-v text-secondary"></i>
+							<div class="float-end">
+								<button class="btn bg-light border-secondary p-1 rounded-1">
+									<i class="fa fa-plus"></i> Group
 								</button>
-								<ul class="dropdown-menu">
-									<li>
-										<a class="dropdown-item" href="#">Edit Assignments date</a>
-									</li>
-								</ul>
-							</span>
-						</div>
-						<div class="bg-dark bg-opacity-10 w-100 d-flex justify-content-between p-2">
-							<h3>ASSIGNMENTS</h3>
-							<div class="">
-								<button class="clearfix rounded-pill border border-secondary">
-									40% of Total
+								<button class="btn btn-danger p-1 rounded-1">
+									<i class="fa fa-plus"></i>
+									Assignment
 								</button>
-								<i class="fa fa-plus text-secondary"></i>
-								<i class="fa fa-ellipsis-v mx-3 text-secondary"></i>
+								<span class="dropdown">
+									<button
+										type="button"
+										class="btn btn-light"
+										data-bs-toggle="dropdown"
+									>
+										<i class="fa fa-ellipsis-v text-secondary"></i>
+									</button>
+									<ul class="dropdown-menu">
+										<li>
+											<a class="dropdown-item" href="#"
+												>Edit Assignments date</a
+											>
+										</li>
+									</ul>
+								</span>
 							</div>
 						</div>
-						<select>
-							<option>Edit</option>
-							<option>Speed Grader</option>
-							<option>Duplicate</option>
-							<option>Delete</option>
-							<option>Move To...</option>
-							<option>Send To...</option>
-							<option>Copy To...</option>
-							<option>Share to Commons</option>
-						</select>
 
-						<ul>
-							<li>
-								<a href="edit.html">Assignment 1</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Assignment 2</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Assignment 3</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Assignment 4</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-						</ul>
-						<div class="bg-dark bg-opacity-10 w-100 d-flex justify-content-between p-2">
-							<h3>Quizzes</h3>
-							<div class="">
-								<button class="clearfix rounded-pill border border-secondary">
-									10% of Total
-								</button>
-								<i class="fa fa-plus text-secondary"></i>
-								<i class="fa fa-ellipsis-v mx-3 text-secondary"></i>
-							</div>
-						</div>
-							<select>
-								<option>Edit</option>
-								<option>Speed Grader</option>
-								<option>Duplicate</option>
-								<option>Delete</option>
-								<option>Move To...</option>
-								<option>Send To...</option>
-								<option>Copy To...</option>
-								<option>Share to Commons</option>
-							</select>
-						
-						<ul>
-							<li>
-								<a href="edit.html">Quiz 1</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Quiz 2</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Quiz 3</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Quiz 4</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-						</ul>
-
-						<span>
-						
-								<div class="bg-dark bg-opacity-10 w-100 d-flex justify-content-between p-2">
-									<h3>Exams</h3>
-									<div class="">
-										<button class="clearfix rounded-pill border border-secondary">
-											20% of Total
-										</button>
-										<i class="fa fa-plus text-secondary"></i>
-										<i class="fa fa-ellipsis-v mx-3 text-secondary"></i>
-									</div>
+						<div>
+							<div
+								class="bg-dark border bg-opacity-10 w-100 d-flex justify-content-between p-2"
+							>
+								<div class="">
+									<i class="fa fa-grip-vertical"></i>
+									<i class="dropdown dropdown-toggle ms-2"></i>
+									<h3 class="ms-2 d-inline-block">Assignments</h3>
 								</div>
-								<select>
-									<option>Edit</option>
-									<option>Speed Grader</option>
-									<option>Duplicate</option>
-									<option>Delete</option>
-									<option>Move To...</option>
-									<option>Send To...</option>
-									<option>Copy To...</option>
-									<option>Share to Commons</option>
-								</select>
-							
-						</span>
-						<ul>
-							<li>
-								<a href="edit.html">Exam 1</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Midterm</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-							<li>
-								<a href="edit.html">Final</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-						</ul>
-
-						
-						<div class="bg-dark bg-opacity-10 w-100 d-flex justify-content-between p-2">
-							<h3>Project</h3>
-							<div class="">
-								<button class="clearfix rounded-pill border border-secondary">
-									30% of Total
-								</button>
-								<i class="fa fa-plus text-secondary"></i>
-								<i class="fa fa-ellipsis-v mx-3 text-secondary"></i>
+								<div class="">
+									<button class="clearfix rounded-pill border border-secondary">
+										40% of Total
+									</button>
+									<i class="fa fa-plus text-secondary"></i>
+									<span class="dropdown">
+										<button type="button" class="btn" data-bs-toggle="dropdown">
+											<i class="fa fa-ellipsis-v text-secondary"></i>
+										</button>
+										<ul class="dropdown-menu">
+											<option class="dropdown-item">Edit</option>
+											<option class="dropdown-item">Speed Grader</option>
+											<option class="dropdown-item">Duplicate</option>
+											<option class="dropdown-item">Delete</option>
+											<option class="dropdown-item">Move To...</option>
+											<option class="dropdown-item">Send To...</option>
+											<option class="dropdown-item">Copy To...</option>
+											<option class="dropdown-item">Share to Commons</option>
+										</ul>
+									</span>
+								</div>
 							</div>
-						</div>							<select>
-								<option>Edit</option>
-								<option>Speed Grader</option>
-								<option>Duplicate</option>
-								<option>Delete</option>
-								<option>Move To...</option>
-								<option>Send To...</option>
-								<option>Copy To...</option>
-								<option>Share to Commons</option>
-							</select>
-						
-						<ul>
-							<li>
-								<a href="edit.html">Project</a>
-								<div><a href="#">multiple modules</a> | Not available yet</div>
-							</li>
-						</ul>
+
+							<ul class="list-unstyled border-start border-success border-3">
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Assignment 1</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Assignment 2</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Assignment 3</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Assignment 4</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<div
+								class="bg-dark bg-opacity-10 w-100 d-flex justify-content-between p-2"
+							>
+								<div>
+									<i class="fa fa-grip-vertical"></i>
+									<i class="dropdown dropdown-toggle ms-2"></i>
+									<h3 class="ms-2 d-inline-block">Quizzes</h3>
+								</div>
+								<div class="">
+									<button class="clearfix rounded-pill border border-secondary">
+										10% of Total
+									</button>
+									<i class="fa fa-plus text-secondary"></i>
+									<span class="dropdown">
+										<button type="button" class="btn" data-bs-toggle="dropdown">
+											<i class="fa fa-ellipsis-v text-secondary"></i>
+										</button>
+										<ul class="dropdown-menu">
+											<option class="dropdown-item">Edit</option>
+											<option class="dropdown-item">Speed Grader</option>
+											<option class="dropdown-item">Duplicate</option>
+											<option class="dropdown-item">Delete</option>
+											<option class="dropdown-item">Move To...</option>
+											<option class="dropdown-item">Send To...</option>
+											<option class="dropdown-item">Copy To...</option>
+											<option class="dropdown-item">Share to Commons</option>
+										</ul>
+									</span>
+								</div>
+							</div>
+
+							<ul class="list-unstyled border-start border-success border-3">
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Quiz 1</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Quiz 2</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Quiz 3</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Quiz 4</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<div
+								class="bg-dark bg-opacity-10 w-100 d-flex justify-content-between p-2"
+							>
+								<div>
+									<i class="fa fa-grip-vertical"></i>
+									<i class="dropdown dropdown-toggle ms-2"></i>
+									<h3 class="ms-2 d-inline-block">Exams</h3>
+								</div>
+								<div class="">
+									<button class="clearfix rounded-pill border border-secondary">
+										20% of Total
+									</button>
+									<i class="fa fa-plus text-secondary"></i>
+									<span class="dropdown">
+										<button type="button" class="btn" data-bs-toggle="dropdown">
+											<i class="fa fa-ellipsis-v text-secondary"></i>
+										</button>
+										<ul class="dropdown-menu">
+											<option class="dropdown-item">Edit</option>
+											<option class="dropdown-item">Speed Grader</option>
+											<option class="dropdown-item">Duplicate</option>
+											<option class="dropdown-item">Delete</option>
+											<option class="dropdown-item">Move To...</option>
+											<option class="dropdown-item">Send To...</option>
+											<option class="dropdown-item">Copy To...</option>
+											<option class="dropdown-item">Share to Commons</option>
+										</ul>
+									</span>
+								</div>
+							</div>
+
+							<ul class="list-unstyled border-start border-success border-3">
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Exam 1</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Midterm</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Final</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<div
+								class="bg-dark bg-opacity-10 w-100 d-flex justify-content-between p-2"
+							>
+								<div>
+									<i class="fa fa-grip-vertical"></i>
+									<i class="dropdown dropdown-toggle ms-2"></i>
+									<h3 class="ms-2 d-inline-block">Project</h3>
+								</div>
+								<div class="">
+									<button class="clearfix rounded-pill border border-secondary">
+										30% of Total
+									</button>
+									<i class="fa fa-plus text-secondary"></i>
+									<span class="dropdown">
+										<button type="button" class="btn" data-bs-toggle="dropdown">
+											<i class="fa fa-ellipsis-v text-secondary"></i>
+										</button>
+										<ul class="dropdown-menu">
+											<option class="dropdown-item">Edit</option>
+											<option class="dropdown-item">Speed Grader</option>
+											<option class="dropdown-item">Duplicate</option>
+											<option class="dropdown-item">Delete</option>
+											<option class="dropdown-item">Move To...</option>
+											<option class="dropdown-item">Send To...</option>
+											<option class="dropdown-item">Copy To...</option>
+											<option class="dropdown-item">Share to Commons</option>
+										</ul>
+									</span>
+								</div>
+							</div>
+
+							<ul class="list-unstyled border-start border-success border-3">
+								<li>
+									<div
+										class="d-flex align-items-center border border-1 border-start-0 border-top-0 border-top-0"
+									>
+										<div>
+											<i
+												class="fa text-black-50 fa-grip-vertical ms-2 me-2"
+											></i>
+
+											<i class="fa text-success fa-edit me-2"></i>
+										</div>
+
+										<div class="ms">
+											<h4 class="mb-0"><a href="edit.html">Project</a></h4>
+											<a href="#">multiple modules</a> | Not available yet
+										</div>
+										<!-- TODO use ms for float -->
+										<div class="ms-auto">
+											<i class="fas fa-check-circle text-success"> </i>
+											<span class="dropdown">
+												<button
+													type="button"
+													class="btn"
+													data-bs-toggle="dropdown"
+												>
+													<i class="fa fa-ellipsis-v text-secondary"></i>
+												</button>
+												<ul class="dropdown-menu">
+													<option class="dropdown-item">Edit</option>
+													<option class="dropdown-item">Speed Grader</option>
+													<option class="dropdown-item">Duplicate</option>
+													<option class="dropdown-item">Delete</option>
+													<option class="dropdown-item">Move To...</option>
+													<option class="dropdown-item">Send To...</option>
+													<option class="dropdown-item">Copy To...</option>
+													<option class="dropdown-item">
+														Share to Commons
+													</option>
+												</ul>
+											</span>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
