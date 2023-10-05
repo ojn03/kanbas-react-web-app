@@ -1,0 +1,21 @@
+ a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.current-tab {
+	color: black;
+	position: relative;
+}
+
+.current-tab::before {
+	position: absolute;
+	content: "";
+	left: -5px;
+	height: 130%;
+	width: 2%;
+	background-color: black;
+}
+.breadcrumb {
+	--bs-breadcrumb-divider: ">";
+}
