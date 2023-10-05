@@ -3,17 +3,25 @@
 	color: inherit;
 }
 
+a:hover{
+	color:black;
+}
+
 .current-tab {
 	color: black;
 	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .current-tab::before {
 	position: absolute;
 	content: "";
-	left: -5px;
+	left: -8px;
 	height: 130%;
-	width: 2%;
+	margin-top: 2%;
+	width: 2.5px;
+	align-self: center;
 	background-color: black;
 }
 .breadcrumb {
