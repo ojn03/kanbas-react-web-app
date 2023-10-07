@@ -23,6 +23,10 @@ a:hover {
 	align-items: center;
 }
 
+.fit-content{
+	width:fit-content;
+}
+
 .current-tab::before {
 	position: absolute;
 	content: "";

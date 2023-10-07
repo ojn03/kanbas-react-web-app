@@ -4,110 +4,233 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Grades</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			rel="stylesheet"
+		/>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<link rel="stylesheet" href="index.css" />
 	</head>
 	<body>
-		<table>
-			<tr valign="top">
-				<td>
-					<ul>
-						<li><a href="account.html">Account</a></li>
-						<li><a href="#">Dashboard</a></li>
-						<li><a href="courses.html">Courses</a></li>
-						<li><a href="#">Calendar</a></li>
-						<li><a href="#">Inbox</a></li>
-						<li><a href="#">History</a></li>
-						<li><a href="#">Studio</a></li>
-						<li><a href="#">Comments</a></li>
-						<li><a href="#">Help</a></li>
-					</ul>
-				</td>
-				<td>
-					<ul>
+		<div class="d-flex flex-row w-100">
+			<ul
+				class="bg-black d-flex flex-column gap-3 list-unstyled text-decoration-none"
+			>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-user-circle text-white-50"></i>
+					<a class="text-white" href="account.html">Account</a>
+				</li>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-tachometer-alt text-danger"></i>
+					<a class="text-white text-decoration-none" href="dashboard.html"
+						>Dashboard</a
+					>
+				</li>
+
+				<li class="p-2 bg-white d-flex flex-column align-items-center">
+					<i class="fa fa-book text-danger"></i>
+					<a class="text-danger" href="courses.html">Courses</a>
+				</li>
+
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-calendar-alt text-danger"></i>
+					<a class="text-white" href="#">Calendar</a>
+				</li>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-inbox text-danger"></i>
+					<a class="text-white" href="#">Inbox</a>
+				</li>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-clock text-danger"></i>
+					<a class="text-white" href="#">History</a>
+				</li>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-tv text-danger"></i>
+					<a class="text-white" href="#">Studio</a>
+				</li>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-power-off fa-rotate-90 text-danger"></i>
+					<a class="text-white" href="#">Commons</a>
+				</li>
+				<li class="p-2 d-flex flex-column align-items-center">
+					<i class="fa fa-question-circle text-danger"></i>
+					<a class="text-white" href="#">Help</a>
+				</li>
+			</ul>
+
+			<div class="d-flex flex-column w-100 p-2 pe-5">
+				<nav class="d-flex gap-2 border-bottom">
+					<i class="fa fa-2x text-danger mx-2 px-3 me-1 fa-bars"></i>
+					<h4>
+						<ol class="breadcrumb">
+							<li class="text-danger breadcrumb-item">
+								<a href="#">CS4550.19753.202410</a>
+							</li>
+							<li class="text-black breadcrumb-item active" aria-current="page">
+								Grades
+							</li>
+						</ol>
+					</h4>
+				</nav>
+
+				<div class="d-flex flex-row w-100">
+					<ul
+						class="sidebar d-flex flex-column gap-3 p-3 me-4 ps-4 list-unstyled text-danger w-25"
+					>
 						<li><a href="home.html">Home</a></li>
 						<li><a href="#">Modules</a></li>
 						<li><a href="#">Piazza</a></li>
 						<li><a href="#">Zoom Meetings</a></li>
 						<li><a href="assignments/index.html">Assignments</a></li>
 						<li><a href="#">Quizzes</a></li>
-						<li><a href="grades.html">Grades</a></li>
+						<li class="current-tab"><a href="grades.html">Grades</a></li>
 						<li><a href="#">People</a></li>
 						<li><a href="#">Panopto Video</a></li>
-						<li><a href="#">Discussions</a></li>
-						<li><a href="#">Announcements</a></li>
-						<li><a href="#">Pages</a></li>
-						<li><a href="#">Files</a></li>
-						<li><a href="#">Rubrics</a></li>
-						<li><a href="#">Outcomes</a></li>
-						<li><a href="#">Collaborations</a></li>
-						<li><a href="#">Syllabus</a></li>
+						<li>
+							<a href="#">Discussions</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
+						<li>
+							<a href="#">Announcements</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
+						<li>
+							<a href="#">Pages</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
+						<li>
+							<a href="#">Files</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
+						<li>
+							<a href="#">Rubrics</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
+						<li>
+							<a href="#">Outcomes</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
+						<li>
+							<a href="#">Collaborations</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
+						<li>
+							<a href="#">Syllabus</a
+							><i
+								class="fa fa-eye-slash text-black-50 float-end center mt-1"
+							></i>
+						</li>
 						<li><a href="#">Settings</a></li>
 					</ul>
-				</td>
-				<td>
-					<span>
-						<select>
-							<option>Gradebook</option>
-						</select>
-						<button>import</button>
-						<select>
-							<option>Export</option>
-						</select>
-						<button>Configue</button>
-					</span>
-					<h2>Student Names</h2>
-					<input type="text" placeholder="Search Students" />
-					<h2>Assignment Names</h2>
-					<input type="text" placeholder="Search Assignment" />
-					<div><button>Apply Filters</button></div>
-					<table border>
-						<thead>
-							<tr>
-								<th>Student Name</th>
-								<th>Assignment 1</th>
-								<th>Assignment 2</th>
-								<th>Assignment 3</th>
-								<th>Assignment 4</th>
-								<th>Assignment 5</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Student 1</td>
-								<td><input type="text" value="82" size="3" /></td>
-								<td>99</td>
-								<td>98</td>
-								<td>97</td>
-								<td>96</td>
-							</tr>
-							<tr>
-								<td>Student 2</td>
-								<td>95</td>
-								<td><input type="text" value="88" size="3" /></td>
-								<td>93</td>
-								<td>92</td>
-								<td>91</td>
-							</tr>
-							<tr>
-								<td>Student 3</td>
-								<td>90</td>
-								<td>89</td>
-								<td><input type="text" value="94" size="3" /></td>
-								<td>87</td>
-								<td>86</td>
-							</tr>
+					<div class="w-100 d-flex flex-column mt-2">
+						<span class="ms-auto mb-2">
+							<button class="rounded-1">
+								<i class="fa fa-file-import me-2"></i>import
+							</button>
+							<button class="rounded-1">
+								<i class="fa fa-file-export me-1"></i>export
+							</button>
+							<button class="rounded-1"><i class="fa fa-cog"></i></button>
+						</span>
+						<div class="d-flex flex-row">
+							<h5>Student Names</h5>
+							<h5 class="mx-auto">Assignment Names</h5>
+						</div>
+						<div class="d-flex flex-row justify-content-evenly">
+							<div class="p-1 border" style="width: 45%">
+								<i class="fa fa-search"></i>
+								<input
+									placeholder="Search Students"
+									class="border-0"
+									type="text"
+								/>
+								<i class="fa fa-caret-down ms-auto"></i>
+							</div>
 
-							<tr>
-								<td>Student 4</td>
-								<td>85</td>
-								<td>84</td>
-								<td>83</td>
-								<td><input type="text" value="100" size="3" /></td>
-								<td>81</td>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-			</tr>
-		</table>
+							<div class="p-1 border" style="width: 45%">
+								<i class="fa fa-search"></i>
+								<input
+									placeholder="Search Assignments"
+									class="border-0"
+									type="text"
+								/>
+								<i class="fa fa-caret-down ms-auto"></i>
+							</div>
+						</div>
+						<button class="my-3 fit-content rounded-1 fa fa-filter p-2">
+							Apply Filters
+						</button>
+						<table class="table table-bordered table-striped">
+							<thead>
+								<tr>
+									<th>Student Name</th>
+									<th>Assignment 1</th>
+									<th>Assignment 2</th>
+									<th>Assignment 3</th>
+									<th>Assignment 4</th>
+									<th>Assignment 5</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th class="text-danger">Student 1</th>
+									<th>82</th>
+									<th>99</th>
+									<th>98</th>
+									<th>97</th>
+									<th>96</th>
+								</tr>
+								<tr>
+									<th class="text-danger">Student 2</th>
+									<th>95</th>
+									<th>
+										<input value="88" class="w-50" type="text" />
+
+										<button class="fa rounded-1 fa-arrow-right "></button>
+									</th>
+									<th>93</th>
+									<th>92</th>
+									<th>91</th>
+								</tr>
+								<tr>
+									<th class="text-danger">Student 3</th>
+									<th>90</th>
+									<th>89</th>
+									<th>94</th>
+									<th>87</th>
+									<th>86</th>
+								</tr>
+								<tr>
+									<th class="text-danger">Student 4</th>
+									<th>85</th>
+									<th>64</th>
+									<th>83</th>
+									<th>100</th>
+									<th>81</th>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
