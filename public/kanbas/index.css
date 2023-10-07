@@ -1,12 +1,21 @@
- a {
+a {
 	text-decoration: none;
 	color: inherit;
 }
 
-a:hover{
-	color:black;
+a:hover {
+	color: black;
 }
 
+.sidebar {
+	max-width: 200px;
+	min-width: 190px;
+}
+
+.sidebar > li {
+	text-wrap: wrap;
+}
+/* TODO convert bootstrap to CSS for sidebar d-flex flex-column gap-3 p-3 me-4 ps-4 list-unstyled text-danger w-25  */
 .current-tab {
 	color: black;
 	position: relative;
