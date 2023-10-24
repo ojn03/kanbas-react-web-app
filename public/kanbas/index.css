@@ -1,11 +1,5 @@
-a {
-	text-decoration: none;
-	color: inherit;
-}
 
-a:hover {
-	color: black;
-}
+
 
 .sidebar {
 	max-width: 200px;
@@ -23,9 +17,6 @@ a:hover {
 	align-items: center;
 }
 
-.fit-content{
-	width:fit-content;
-}
 
 .current-tab::before {
 	position: absolute;

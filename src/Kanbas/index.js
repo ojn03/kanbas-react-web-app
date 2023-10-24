@@ -1,22 +1,24 @@
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route, Navigate, useParams } from "react-router";
 import KanbasNavigation from "./KanbasNavigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 
 function Kanbas() {
-   return (
-     <div className="d-flex ">
-       <KanbasNavigation />
-       <Routes>
-          <Route path="/" element={<Navigate to="Dashboard" />} />
-          <Route path="Account" element={<h1>Account</h1>} />
-          <Route path="Dashboard" element={<Dashboard />} />
-          <Route path="Courses/*" element={<h1>Courses</h1>} />
-          <Route path="Courses/:courseId/*" element={<Courses />} />
+	const { courseId = "someClass" } = useParams();
+	return (
+		<div className="d-flex ">
+			<KanbasNavigation />
+			<Routes>
+				<Route path="/" element={<Navigate to="Dashboard" />} />
+				<Route path="Account" element={<h1>Account</h1>} />
+				<Route path="Dashboard" element={<Dashboard />} />
 
-        </Routes>
-
-     </div>
-   );
- }
- export default Kanbas;
+				{/* Courses Page */}
+        <Route path="Courses/" element={<Navigate to="SomeClass" />} />
+				<Route path="Courses/:courseId/*" element={<Courses />} />
+				
+			</Routes>
+		</div>
+	);
+}
+export default Kanbas;
