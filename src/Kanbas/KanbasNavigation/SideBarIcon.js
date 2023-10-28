@@ -1,12 +1,14 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const SideBarIcon = ({ icon, linkName , textColor = "white",  }) => {
+const SideBarIcon = ({ icon, linkName, textColor = "white" }) => {
 	const { pathname } = useLocation();
 	return (
 		<li
 			className={`${
-				pathname.includes(linkName) ? "bg-white text-danger" : "bg-black text-white"
+				pathname.includes(linkName)
+					? "bg-white text-danger"
+					: "bg-black text-white"
 			}`}
 		>
 			<Link

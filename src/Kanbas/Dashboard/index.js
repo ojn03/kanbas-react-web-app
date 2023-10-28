@@ -1,5 +1,5 @@
 import React from "react";
-import courses from "./Database/courses.json";
+import courses from "../Database/courses.json";
 import DashboardCard from "./DashboardCard";
 
 const Dashboard = () => {
@@ -24,8 +24,8 @@ const Dashboard = () => {
 			<div className="container mx-0">
 			
 				<div className="ms-3 row-cols-4 row gap-3">
-					{courses.map((course) => (
-						<DashboardCard {...course} />
+					{courses.map((course,key) => (
+						<DashboardCard key={key} {...course} />
 					))}
 				</div>
 			</div>

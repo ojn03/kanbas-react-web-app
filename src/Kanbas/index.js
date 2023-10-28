@@ -2,9 +2,10 @@ import { Routes, Route, Navigate, useParams } from "react-router";
 import KanbasNavigation from "./KanbasNavigation";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
+import CourseData from "./Database/courses.json";
 
 function Kanbas() {
-	const { courseId = "someClass" } = useParams();
+	const defaultCourse = CourseData[0]._id;
 	return (
 		<div className="d-flex ">
 			<KanbasNavigation />
@@ -14,9 +15,8 @@ function Kanbas() {
 				<Route path="Dashboard" element={<Dashboard />} />
 
 				{/* Courses Page */}
-        <Route path="Courses/" element={<Navigate to="SomeClass" />} />
+				<Route path="Courses/" element={<Navigate to={defaultCourse} />} />
 				<Route path="Courses/:courseId/*" element={<Courses />} />
-				
 			</Routes>
 		</div>
 	);

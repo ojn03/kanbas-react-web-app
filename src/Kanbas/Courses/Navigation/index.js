@@ -1,6 +1,5 @@
 import React from "react";
-import { Link, Route, Routes, Navigate } from "react-router-dom";
-import { FaEyeSlash } from "react-icons/fa";
+import { Route, Routes, Navigate } from "react-router-dom";
 import CourseIcon from "./NavIcon";
 
 const navLinks = [
@@ -27,12 +26,9 @@ const navLinks = [
 const Courses = () => {
 	return (
 		<div>
-			<Routes>
-				<Route path="/" element={<Navigate to="Home" />} />
-			</Routes>
 			<ul className="sidebar d-flex flex-column gap-3 p-3 me-4 ps-4 list-unstyled text-danger w-25">
-				{navLinks.map(({ linkName, icon }) => (
-					<CourseIcon linkName={linkName} icon={icon} />
+				{navLinks.map((nl,key) => (
+					<CourseIcon key={key} {...nl} />
 				))}
 			</ul>
 		</div>

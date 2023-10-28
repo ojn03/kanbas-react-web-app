@@ -1,44 +1,65 @@
 [
 	{
-		"courseName": "Web Dev",
+		"_id": "C1",
+		"name": "Web Dev",
 		"color": "#456",
-		"_id": "CS4550",
-		"term": "Fall 2023 Semester Full Term"
+		"number": "CS4550",
+		"term": "Fall 2023 Semester Full Term",
+		"startDate": "2023-09-10",
+		"endDate": "2023-12-15"
 	},
 	{
-		"courseName": "Gender Studies",
+		"_id": "C2",
+		"name": "Gender Studies",
 		"color": "#DA7",
-		"_id": "GS1010",
-		"term": "Spring 2024 Semester Full Term"
+		"number": "GS1010",
+		"term": "Spring 2024 Semester Full Term",
+		"startDate": "2024-01-10",
+		"endDate": "2024-05-15"
 	},
 	{
-		"courseName": "Sex Ed",
+		"_id": "C3",
+		"name": "Sex Ed",
 		"color": "#F2A",
-		"_id": "SEX069",
-		"term": "Fall 2022 Semester Full Term"
+		"number": "SEX069",
+		"term": "Fall 2022 Semester Full Term",
+		"startDate": "2022-09-10",
+		"endDate": "2022-12-15"
 	},
 	{
-		"courseName": "Stocks for Dummies",
+		"_id": "C4",
+		"name": "Stocks for Dummies",
 		"color": "#1A8",
-		"_id": "SN101",
-		"term": "Fall 2021 Semester Full Term"
+		"number": "SN101",
+		"term": "Fall 2021 Semester Full Term",
+		"startDate": "2021-09-10",
+		"endDate": "2021-12-15"
 	},
 	{
-		"courseName": "Underwater BasketWeaving",
+		"_id": "C5",
+		"name": "Underwater BasketWeaving",
 		"color": "#07C",
-		"_id": "UW001",
-		"term": "Fall 2023 Semester Full Term"
+		"number": "UW001",
+		"term": "Fall 2023 Semester Full Term",
+		"startDate": "2023-09-10",
+		"endDate": "2023-12-15"
 	},
 	{
-		"courseName": "Fundamentals of TIKTOK",
+		"_id": "C6",
+		"name": "Fundamentals of TIKTOK",
 		"color": "#505",
-		"_id": "FT111",
-		"term": "Spring 2024"
+		"number": "FT111",
+		"term": "Spring 2024",
+		"startDate": "2024-01-10",
+		"endDate": "2024-05-15"
 	},
 	{
-		"courseName": "Entrepreneurship",
+		"_id": "C7",
+		"name": "Entrepreneurship",
 		"color": "#aa0",
-		"_id": "BS122",
-		"term": "Spring 2024"
+		"number": "BS122",
+		"term": "Spring 2024",
+		"startDate": "2024-01-10",
+		"endDate": "2024-05-15"
 	}
 ]

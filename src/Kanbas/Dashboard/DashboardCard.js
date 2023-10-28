@@ -1,23 +1,23 @@
 import { FaEllipsisV } from "react-icons/fa";
 import { FaPenSquare } from "react-icons/fa";
 
-const DashboardCard = ({ color, courseName, _id, term }) => {
+const DashboardCard = ({ color, name, number, term }) => {
 	return (
 		<div
 			className="d-flex flex-column col-4 border border-4 border-black-50 rounded-3 p-0 card"
 			style={{ width: "260px", height: "270px" }}
 		>
-			<div class="h-50" style={{ backgroundColor: color }}>
-				<FaEllipsisV className="float-end p-3 pe-4 text-white" />
+			<div className="h-50" style={{ backgroundColor: color }}>
+				<FaEllipsisV className="float-end  text-white m-3" />
 			</div>
 			<div className="h-50 w-100 p-2">
-				<span style={{ color }}>{courseName}</span>
+				<span style={{ color }}>{name}</span>
 				<br />
-				<span>{_id}</span>
+				<span>{number}</span>
 				<br />
 				<small>{term}</small>
 				<br />
-				<FaPenSquare className="mt-2" />
+				<FaPenSquare className="mt-2" size={24} />
 			</div>
 		</div>
 	);
