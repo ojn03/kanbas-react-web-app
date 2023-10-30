@@ -5,6 +5,8 @@ import { Route, Routes, Navigate, useParams, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import courses from "../Database/courses.json";
 import Modules from "./Modules";
+import Home from "./Home";
+import Assignments from "./Assignments";
 
 const Courses = () => {
 	const { pathname } = useLocation();
@@ -34,9 +36,9 @@ const Courses = () => {
 				<NavCourse />
 				<Routes>
 					<Route path="/" element={<Navigate to="Home" />} />
-					<Route path="Home" element={<h1>Home</h1>} />
+					<Route path="Home" element={<Home/>} />
 					<Route path="Modules" element={<Modules />} />
-					<Route path="Assignments" element={<h1>Assignments</h1>} />
+					<Route path="Assignments" element={<Assignments />} />
 					<Route
 						path="Assignments/:assignmentId"
 						element={<h1>Assignment Editor</h1>}

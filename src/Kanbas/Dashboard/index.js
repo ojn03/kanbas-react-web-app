@@ -18,7 +18,7 @@ const Dashboard = () => {
 				</h4>
 			</div>
 			<div>
-				Published Courses (2)
+				Published Courses ({courses.length})
 				<hr />
 			</div>
 			<div className="container mx-0">

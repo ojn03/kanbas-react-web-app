@@ -1,0 +1,11 @@
+[
+	{ "_id": "A1_1", "title": "Propulsion Assignment", "course": "C1" ,"due" : "01/23/4567"},
+	{ "_id": "A1_2", "title": "Combustion Analysis", "course": "C1" ,"due" : "01/23/4567"},
+	{ "_id": "A1_3", "title": "Nozzle Design Project", "course": "C1" ,"due" : "01/23/4567"},
+	{ "_id": "A2_1", "title": "Aerodynamics Quiz", "course": "C2" ,"due" : "01/23/4567"},
+	{ "_id": "A2_2", "title": "Flow Analysis", "course": "C2" ,"due" : "01/23/4567"},
+	{ "_id": "A2_3", "title": "Heating Analysis", "course": "C2" ,"due" : "01/23/4567"},
+	{ "_id": "A3_1", "title": "Structural Design Task", "course": "C3" ,"due" : "01/23/4567"},
+	{ "_id": "A3_2", "title": "Orbital Calculations", "course": "C3" ,"due" : "01/23/4567"},
+	{ "_id": "A3_3", "title": "Systems Engineering Exam", "course": "C3" ,"due" : "01/23/4567"}
+]
