@@ -70,7 +70,10 @@ function KanbasNavigation() {
 	];
 
 	return (
-		<ul className=" d-flex flex-column list-unstyled text-decoration-none">
+		<ul
+			className="d-flex flex-column list-unstyled text-decoration-none bg-black"
+			style={{ height: "90vh" }}
+		>
 			{icons.map((props, index) => (
 				<SideBarIcon {...props} key={index} />
 			))}

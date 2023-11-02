@@ -13,8 +13,8 @@ const ModuleList = () => {
 		<div className="">
 			<Header />
 			<ul className="d-flex flex-column gap-2 ">
-				{courseModules.map((m) => (
-					<ModuleItem {...m} />
+				{courseModules.map((m,idx) => (
+					<ModuleItem key={idx} {...m} />
 				))}
 			</ul>
 		</div>

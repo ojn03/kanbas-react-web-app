@@ -15,7 +15,7 @@ const ModuleItem = ({ _id, name, description, course }) => {
 			<div>
 				<FaCheckCircle className="text-success" />
 				<FaPlus className="dropdown-toggle" />
-				<FaEllipsisV class="text-secondary" />
+				<FaEllipsisV className="text-secondary" />
 			</div>
 		</li>
 	);
