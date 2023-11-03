@@ -2,7 +2,8 @@ import React, { useState } from "react";
 function ArrayStateVariable() {
   const [array, setArray] = useState([1, 2, 3, 4, 5]);
   const addElement = () => {
-    setArray([...array, Math.floor(Math.random() * 100)]);
+    array.push(Math.floor(Math.random() * 100));
+    setArray([...array]);
   };
   const deleteElement = (index) => {
     setArray(array.filter((item, i) => i !== index));
