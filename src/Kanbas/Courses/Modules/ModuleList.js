@@ -1,27 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 import modules from "../../Database/modules.json";
 import ModuleItem from "./ModuleItem";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
+import AddModuleModal from "./AddModuleModal";
 
 const ModuleList = () => {
 	const { courseId } = useParams();
-	const courseModules = modules.filter((module) => module.course === courseId);
+	const [modulesState, setModulesState] = useState(modules);
+	const courseModules = modulesState.filter(
+		(module) => module.course === courseId
+	);
 	return (
-		<div className="">
-			<Header />
+		<div>
+			<Header modules={modulesState} setModules={setModulesState} />
 			<ul className="d-flex flex-column gap-2 ">
-				{courseModules.map((m,idx) => (
-					<ModuleItem key={idx} {...m} />
+				{courseModules.map((m, idx) => (
+					<ModuleItem
+						modules={modulesState}
+						setModules={setModulesState}
+						key={idx}
+						{...m}
+					/>
 				))}
 			</ul>
 		</div>
 	);
 };
 
-const Header = () => {
+const Header = ({ modules, setModules }) => {
 	return (
 		<div className="border-bottom pb-3 my-4 ">
 			<div className="ms-auto" style={{ width: "fit-content" }}>
@@ -32,10 +41,8 @@ const Header = () => {
 					<FaCheckCircle className="text-success" />
 					Publish All
 				</button>
-				<button className="bg-danger text-white rounded-1">
-					<FaPlus />
-					Module
-				</button>
+				
+				<AddModuleModal modules={modules} setModules={setModules} />
 
 				<span className="dropdown">
 					<button

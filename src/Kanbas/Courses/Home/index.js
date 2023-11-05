@@ -1,5 +1,5 @@
 import React from "react";
-import ModuleList from "../Modules/ModuleList.js.js";
+import ModuleList from "../Modules/ModuleList.js";
 import Status from "./status.js";
 const Home = () => {
 	return (

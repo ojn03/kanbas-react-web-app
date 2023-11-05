@@ -23,24 +23,24 @@ const AddCourseModal = ({ courses, setCourses, className }) => {
 				type="button"
 				className="btn btn-primary"
 				data-bs-toggle="modal"
-				data-bs-target="#staticBackdrop"
+				data-bs-target="#addCourseModal"
 			>
 				Add Course
 			</button>
 
 			<div
 				className="modal fade"
-				id="staticBackdrop"
+				id="addCourseModal"
 				data-bs-backdrop="static"
 				data-bs-keyboard="false"
 				tabIndex="-1"
-				aria-labelledby="staticBackdropLabel"
+				aria-labelledby="addCourseModalLabel"
 				aria-hidden="true"
 			>
 				<div className="modal-dialog">
 					<div className="modal-content">
 						<div className="modal-header">
-							<h5 className="modal-title" id="staticBackdropLabel">
+							<h5 className="modal-title" id="addCourseModalLabel">
 								Add Course
 							</h5>
 							<button
