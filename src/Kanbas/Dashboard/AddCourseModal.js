@@ -1,11 +1,12 @@
 import React from "react";
 
 const AddCourseModal = ({ courses, setCourses, className }) => {
-	const newId = new Date().toISOString();
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		const newId = new Date().toISOString();
+
 		const newCourse = {
-			id: newId,
+			_id: newId,
 			number: e.target.CourseNumber.value,
 			name: e.target.CourseName.value,
 			term: e.target.Term.value,
@@ -32,7 +33,7 @@ const AddCourseModal = ({ courses, setCourses, className }) => {
 				id="staticBackdrop"
 				data-bs-backdrop="static"
 				data-bs-keyboard="false"
-				tabindex="-1"
+				tabIndex="-1"
 				aria-labelledby="staticBackdropLabel"
 				aria-hidden="true"
 			>

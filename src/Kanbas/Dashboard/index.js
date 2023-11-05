@@ -4,9 +4,7 @@ import DashboardCard from "./DashboardCard";
 import { Modal } from "bootstrap";
 import AddCourseModal from "./AddCourseModal";
 
-const Dashboard = () => {
-	const [courses, setCourses] = useState(dbCourses);
-
+const Dashboard = ({courses, setCourses}) => {
 	return (
 		<div className="d-flex flex-column w-100 p-2">
 			<div className="gap-2 border-bottom">
@@ -23,14 +21,23 @@ const Dashboard = () => {
 			</div>
 			<div className="w-100 ">
 				<span className="">Published Courses ({courses.length})</span>
-				<AddCourseModal className="float-end" courses={courses} setCourses={setCourses} />
+				<AddCourseModal
+					className="float-end"
+					courses={courses}
+					setCourses={setCourses}
+				/>
 
 				<hr />
 			</div>
 			<div className="container mx-0">
 				<div className="ms-3 row-cols-4 row gap-3">
 					{courses.map((course, key) => (
-						<DashboardCard key={key} {...course} />
+						<DashboardCard
+							key={key}
+							{...course}
+							courses={courses}
+							setCourses={setCourses}
+						/>
 					))}
 				</div>
 			</div>

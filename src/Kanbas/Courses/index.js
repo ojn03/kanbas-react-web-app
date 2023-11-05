@@ -3,16 +3,15 @@ import NavCourse from "./Navigation";
 import { FaBars } from "react-icons/fa";
 import { Route, Routes, Navigate, useParams, useLocation } from "react-router";
 import { Link } from "react-router-dom";
-import courses from "../Database/courses.json";
 import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-const Courses = () => {
+const Courses = ({courseData}) => {
 	const { pathname } = useLocation();
 	const { courseId } = useParams();
-	const course = courses.find((course) => course._id === courseId);
+	const course = courseData.find((course) => course._id === courseId);
 	const crumbPath = pathname.split("/").splice(4);
 	return (
 		<div className="d-flex flex-column w-100 p-2 pe-5">
