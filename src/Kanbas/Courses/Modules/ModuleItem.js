@@ -4,18 +4,15 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
 import EditModuleModal from "./EditModuleModal";
-
-const ModuleItem = ({
-	_id,
-	name,
-	description,
-	course,
-	modules,
-	setModules
-}) => {
+import { useDispatch, useSelector } from "react-redux";
+import { deleteModule } from "./modulesReducer";
+const ModuleItem = ({ _id, name, description }) => {
+	const dispatch = useDispatch();
+	const module = useSelector((state) =>
+		state.modulesReducer.modules.find((module) => module._id === _id)
+	);
 	function deleteItem() {
-		const newModules = modules.filter((module) => module._id !== _id);
-		setModules(newModules);
+		dispatch(deleteModule(module._id));
 	}
 	return (
 		<li className="bg-dark border bg-opacity-10  d-flex justify-content-between p-1 pb-0">
@@ -29,7 +26,7 @@ const ModuleItem = ({
 				<button className="me-2 rounded-1 bg-danger" onClick={deleteItem}>
 					delete
 				</button>
-				<EditModuleModal _id={_id} modules={modules} setModules={setModules} />
+				<EditModuleModal _id={_id} />
 				<FaCheckCircle className="text-success me-2" />
 				<FaPlus className="dropdown-toggle me-2" />
 				<FaEllipsisV className="text-secondary me-1" />

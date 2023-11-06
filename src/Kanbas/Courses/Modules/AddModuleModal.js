@@ -1,10 +1,19 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { useParams } from "react-router";
+import { useSelector, useDispatch } from "react-redux";
+import {
+	addModule
+} from "./modulesReducer";
 
-const AddModuleModal = ({ modules, setModules }) => {
+const AddModuleModal = () => {
 	const { courseId } = useParams();
+
+	const modules = useSelector((state) => state.modulesReducer.modules);
 	const courseModules = modules.filter((module) => module.course === courseId);
+
+	const dispatch = useDispatch();
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const { name, desc } = e.target;
@@ -14,8 +23,8 @@ const AddModuleModal = ({ modules, setModules }) => {
 			description: desc.value,
 			course: courseId
 		};
-		modules.push(newModule);
-		setModules([...modules]);
+
+		dispatch(addModule(newModule));
 	};
 
 	return (

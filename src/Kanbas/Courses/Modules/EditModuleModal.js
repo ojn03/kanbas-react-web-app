@@ -1,24 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { useParams } from "react-router";
+import {
+	updateModule,
+} from "./modulesReducer";
+import { useDispatch, useSelector } from "react-redux";
 
-const EditModuleModal = ({ _id, modules, setModules }) => {
+const EditModuleModal = ({ _id }) => {
+	const dispatch = useDispatch();
 	const { courseId } = useParams();
+	const modules = useSelector((state) => state.modulesReducer.modules);
+
 	const index = modules.findIndex((module) => module._id === _id);
 	const module = modules[index];
 
-	const courseModules = modules.filter((module) => module.course === courseId);
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const { name, desc } = e.target;
-		modules[index] = {
-			_id: `M${courseId}${courseModules.length + 1}`,
+		const newModule = {
+			_id: _id,
 			name: name.value,
 			description: desc.value,
 			course: courseId
 		};
 
-		setModules([...modules]);
+		dispatch(updateModule(newModule));
 	};
 
 	return (

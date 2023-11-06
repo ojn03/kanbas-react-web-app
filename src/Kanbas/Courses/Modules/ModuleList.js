@@ -6,31 +6,28 @@ import { FaCheckCircle } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
 import AddModuleModal from "./AddModuleModal";
+import { useSelector } from "react-redux";
 
 const ModuleList = () => {
 	const { courseId } = useParams();
-	const [modulesState, setModulesState] = useState(modules);
+
+	const modulesState = useSelector((state) => state.modulesReducer.modules);
 	const courseModules = modulesState.filter(
 		(module) => module.course === courseId
 	);
 	return (
 		<div>
-			<Header modules={modulesState} setModules={setModulesState} />
+			<Header modules={modulesState} />
 			<ul className="d-flex flex-column gap-2 ">
 				{courseModules.map((m, idx) => (
-					<ModuleItem
-						modules={modulesState}
-						setModules={setModulesState}
-						key={idx}
-						{...m}
-					/>
+					<ModuleItem modules={modulesState} key={idx} {...m} />
 				))}
 			</ul>
 		</div>
 	);
 };
 
-const Header = ({ modules, setModules }) => {
+const Header = () => {
 	return (
 		<div className="border-bottom pb-3 my-4 ">
 			<div className="ms-auto" style={{ width: "fit-content" }}>
@@ -41,8 +38,8 @@ const Header = ({ modules, setModules }) => {
 					<FaCheckCircle className="text-success" />
 					Publish All
 				</button>
-				
-				<AddModuleModal modules={modules} setModules={setModules} />
+
+				<AddModuleModal />
 
 				<span className="dropdown">
 					<button
