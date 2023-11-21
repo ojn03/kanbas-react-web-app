@@ -1,7 +1,5 @@
-import { React, useState } from "react";
-import dbCourses from "../Database/courses.json";
+import { React } from "react";
 import DashboardCard from "./DashboardCard";
-import { Modal } from "bootstrap";
 import AddCourseModal from "./AddCourseModal";
 
 const Dashboard = ({courses, setCourses}) => {

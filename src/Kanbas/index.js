@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useParams } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 import { useState } from "react";
 import KanbasNavigation from "./KanbasNavigation";
 import Dashboard from "./Dashboard";

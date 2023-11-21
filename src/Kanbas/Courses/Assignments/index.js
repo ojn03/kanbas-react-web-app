@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import assignments from "../../Database/assignments.json";
-import modules from "../../Database/modules.json";
 import courses from "../../Database/courses.json";
 import {
 	FaCheckCircle,

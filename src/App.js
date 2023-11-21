@@ -1,8 +1,8 @@
 import Labs from "./Labs";
 import HelloWorld from "./Labs/a3/HelloWorld";
 import Kanbas from "./Kanbas";
-import { HashRouter, Link } from "react-router-dom";
-import { Routes, Route, Navigate } from "react-router";
+import { HashRouter } from "react-router-dom";
+import { Routes, Route } from "react-router";
 import Nav from "./Nav";
 
 function App() {
@@ -20,3 +20,4 @@ function App() {
 	);
 }
 export default App;
+c

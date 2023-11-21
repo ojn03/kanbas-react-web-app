@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router";
-import modules from "../../Database/modules.json";
 import ModuleItem from "./ModuleItem";
 import { FaCheckCircle } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
 import AddModuleModal from "./AddModuleModal";
 import { useSelector } from "react-redux";

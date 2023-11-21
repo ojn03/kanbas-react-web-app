@@ -1,10 +1,8 @@
-import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa";
+import React from "react";
 import { useParams } from "react-router";
-import {
-	updateModule,
-} from "./modulesReducer";
-import { useDispatch, useSelector } from "react-redux";
+import { updateModule } from "./modulesReducer";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 const EditModuleModal = ({ _id }) => {
 	const dispatch = useDispatch();
