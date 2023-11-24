@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const EditCourseModal = ({ id, courses, setCourses }) => {
+	const BASE = process.env.REACT_APP_API_BASE || "https://kanbas-server-ko6e.onrender.com";
 	const index = courses.findIndex((course) => course._id === id);
 	const course = courses[index];
 	const handleSubmit = async (e) => {
@@ -16,7 +17,7 @@ const EditCourseModal = ({ id, courses, setCourses }) => {
 			color: e.target.Color.value
 		};
 		const response = await axios.put(
-			`http://localhost:4000/api/courses/${id}`,
+			`${BASE}/api/courses/${id}`,
 			courses[index]
 		);
 

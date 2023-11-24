@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 
 const AddCourseModal = ({ courses, setCourses, className }) => {
+	const BASE = process.env.REACT_APP_API_BASE || "https://kanbas-server-ko6e.onrender.com";
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const newId = new Date().toISOString();
@@ -16,7 +17,7 @@ const AddCourseModal = ({ courses, setCourses, className }) => {
 			color: e.target.Color.value
 		};
 		const response = await axios.post(
-			"http://localhost:4000/api/courses",
+			`${BASE}/api/courses`,
 			newCourse
 		);
 		

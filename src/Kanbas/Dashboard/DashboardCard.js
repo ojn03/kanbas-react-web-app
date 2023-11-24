@@ -13,10 +13,11 @@ const DashboardCard = ({
 	courses,
 	setCourses
 }) => {
+	const BASE = process.env.REACT_APP_API_BASE || "https://kanbas-server-ko6e.onrender.com";
 	async function deleteCourse() {
 		const newCourses = courses.filter((course) => course._id !== _id);
 
-		const response = await axios.delete(`http://localhost:4000/api/courses/${_id}`);
+		const response = await axios.delete(`${BASE}/api/courses/${_id}`);
 
 		setCourses(newCourses);
 	}

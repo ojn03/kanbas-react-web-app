@@ -11,9 +11,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Courses = () => {
+	const BASE = process.env.REACT_APP_API_BASE || "https://kanbas-server-ko6e.onrender.com";
 	const { pathname } = useLocation();
 	const { courseId } = useParams();
-	const URL = "http://localhost:4000/api/courses";
+	
+	const URL = `${BASE}/api/courses`;
 	const [course, setCourse] = useState({});
 	const findCourseById = async (courseId) => {
 		const response = await axios.get(`${URL}/${courseId}`);
