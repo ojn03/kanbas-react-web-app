@@ -2,6 +2,7 @@ import { FaEllipsisV } from "react-icons/fa";
 import { FaPenSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import EditCourseModal from "./EditCourseModal";
+import axios from "axios";
 
 const DashboardCard = ({
 	_id,
@@ -12,8 +13,11 @@ const DashboardCard = ({
 	courses,
 	setCourses
 }) => {
-	function deleteCourse() {
+	async function deleteCourse() {
 		const newCourses = courses.filter((course) => course._id !== _id);
+
+		const response = await axios.delete(`http://localhost:4000/api/courses/${_id}`);
+
 		setCourses(newCourses);
 	}
 	return (

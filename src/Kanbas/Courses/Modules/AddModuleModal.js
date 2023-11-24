@@ -2,9 +2,8 @@ import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
-import {
-	addModule
-} from "./modulesReducer";
+import { addModule } from "./modulesReducer";
+import { createModule } from "./client";
 
 const AddModuleModal = () => {
 	const { courseId } = useParams();
@@ -24,7 +23,10 @@ const AddModuleModal = () => {
 			course: courseId
 		};
 
-		dispatch(addModule(newModule));
+		// dispatch(addModule(newModule));
+		createModule(courseId, newModule).then((module) => {
+			dispatch(addModule(module));
+		});
 	};
 
 	return (

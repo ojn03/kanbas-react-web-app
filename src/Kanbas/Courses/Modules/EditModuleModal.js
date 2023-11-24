@@ -1,8 +1,8 @@
 import React from "react";
 import { useParams } from "react-router";
 import { updateModule } from "./modulesReducer";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useDispatch, useSelector } from "react-redux";
+import * as client from "./client";
 
 const EditModuleModal = ({ _id }) => {
 	const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const EditModuleModal = ({ _id }) => {
 	const index = modules.findIndex((module) => module._id === _id);
 	const module = modules[index];
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const { name, desc } = e.target;
 		const newModule = {
@@ -22,7 +22,9 @@ const EditModuleModal = ({ _id }) => {
 			course: courseId
 		};
 
-		dispatch(updateModule(newModule));
+		await client.updateModule(newModule).then(() => {
+			dispatch(updateModule(newModule));
+		});
 	};
 
 	return (

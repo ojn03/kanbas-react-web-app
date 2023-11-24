@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import ModuleItem from "./ModuleItem";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
 import AddModuleModal from "./AddModuleModal";
-import { useSelector } from "react-redux";
+import { setModules } from "./modulesReducer";
+import { findModulesForCourse } from "./client";
+import { useSelector, useDispatch } from "react-redux";
+
 
 const ModuleList = () => {
+	const dispatch = useDispatch();
 	const { courseId } = useParams();
+	useEffect(() => {
+		findModulesForCourse(courseId).then((modules) =>
+			dispatch(setModules(modules))
+		);
+	}, [courseId]);
 
 	const modulesState = useSelector((state) => state.modulesReducer.modules);
 	const courseModules = modulesState.filter(

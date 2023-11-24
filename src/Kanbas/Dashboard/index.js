@@ -1,6 +1,7 @@
 import { React } from "react";
 import DashboardCard from "./DashboardCard";
 import AddCourseModal from "./AddCourseModal";
+import {Modal} from 'bootstrap'
 
 const Dashboard = ({courses, setCourses}) => {
 	return (

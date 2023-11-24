@@ -7,11 +7,22 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-const Courses = ({courseData}) => {
+const Courses = () => {
 	const { pathname } = useLocation();
 	const { courseId } = useParams();
-	const course = courseData.find((course) => course._id === courseId);
+	const URL = "http://localhost:4000/api/courses";
+	const [course, setCourse] = useState({});
+	const findCourseById = async (courseId) => {
+		const response = await axios.get(`${URL}/${courseId}`);
+		setCourse(response.data);
+	};
+
+	useEffect(() => {
+		findCourseById(courseId);
+	}, [courseId]);
 	const crumbPath = pathname.split("/").splice(4);
 	return (
 		<div className="d-flex flex-column w-100 p-2 pe-5">
@@ -21,7 +32,7 @@ const Courses = ({courseData}) => {
 					<ol className="breadcrumb">
 						<li className="text-danger breadcrumb-item">
 							<Link className="text-danger text-decoration-none" href="#">
-								{course.number}
+								{/* {course.number} */}
 							</Link>
 						</li>
 						{crumbPath.map((crumb, idx) => (
@@ -36,12 +47,12 @@ const Courses = ({courseData}) => {
 				<NavCourse />
 				<Routes>
 					<Route path="/" element={<Navigate to="Home" />} />
-					<Route path="Home" element={<Home/>} />
+					<Route path="Home" element={<Home />} />
 					<Route path="Modules" element={<Modules />} />
 					<Route path="Assignments" element={<Assignments />} />
 					<Route
 						path="Assignments/:assignmentId"
-						element={<AssignmentEditor/>}
+						element={<AssignmentEditor />}
 					/>
 					<Route path="Grades" element={<h1>Grades</h1>} />
 				</Routes>

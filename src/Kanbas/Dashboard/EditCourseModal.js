@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const EditCourseModal = ({ id, courses, setCourses }) => {
 	const index = courses.findIndex((course) => course._id === id);
 	const course = courses[index];
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const index = courses.findIndex((course) => course._id === id);
 		courses[index] = {
@@ -14,6 +15,10 @@ const EditCourseModal = ({ id, courses, setCourses }) => {
 			endDate: e.target.EndDate.value,
 			color: e.target.Color.value
 		};
+		const response = await axios.put(
+			`http://localhost:4000/api/courses/${id}`,
+			courses[index]
+		);
 
 		setCourses([...courses]);
 	};

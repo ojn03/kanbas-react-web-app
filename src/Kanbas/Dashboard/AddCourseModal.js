@@ -1,7 +1,8 @@
 import React from "react";
+import axios from "axios";
 
 const AddCourseModal = ({ courses, setCourses, className }) => {
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const newId = new Date().toISOString();
 
@@ -14,6 +15,11 @@ const AddCourseModal = ({ courses, setCourses, className }) => {
 			endDate: e.target.EndDate.value,
 			color: e.target.Color.value
 		};
+		const response = await axios.post(
+			"http://localhost:4000/api/courses",
+			newCourse
+		);
+		
 		setCourses([...courses, newCourse]);
 	};
 

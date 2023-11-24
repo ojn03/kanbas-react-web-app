@@ -5,6 +5,7 @@ import { FaPlus } from "react-icons/fa";
 import { FaEllipsisV } from "react-icons/fa";
 import EditModuleModal from "./EditModuleModal";
 import { useDispatch, useSelector } from "react-redux";
+import * as client from "./client";
 import { deleteModule } from "./modulesReducer";
 const ModuleItem = ({ _id, name, description }) => {
 	const dispatch = useDispatch();
@@ -12,7 +13,9 @@ const ModuleItem = ({ _id, name, description }) => {
 		state.modulesReducer.modules.find((module) => module._id === _id)
 	);
 	function deleteItem() {
-		dispatch(deleteModule(module._id));
+		client.deleteModule(module._id).then((status) => {
+			dispatch(deleteModule(module._id));
+		});
 	}
 	return (
 		<li className="bg-dark border bg-opacity-10  d-flex justify-content-between p-1 pb-0">
